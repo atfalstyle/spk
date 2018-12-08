@@ -4,6 +4,7 @@
     "versions": "1.0",
     "type": "project",
     "license": "MIT",
+    "minimum-stability": "dev",
 	"require": {},
 	"require-dev": {},
 	"autoload": {},
