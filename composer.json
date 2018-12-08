@@ -1,0 +1,16 @@
+{
+    "name": "project/spk",
+    "description": "This Example For Project SPK",
+    "type": "project",
+    "license": "MIT",
+	"require": {},
+	"require-dev": {},
+	"autoload": {},
+	"authors": [
+		{
+			"name": "Muchammad Athfal",
+			"email": "atfalstyle@gmail.com"
+		}
+	]
+}
+
