@@ -1,6 +1,7 @@
 {
-    "name": "spk/spk 1.0",
+    "name": "spk/spk",
     "description": "This Example For Project SPK",
+    "versions": "1.0",
     "type": "project",
     "license": "MIT",
 	"require": {},
