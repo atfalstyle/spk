@@ -2,15 +2,15 @@
 	<a class="navbar-brand" href="#" id="jdl">SPK Penaikan Jabatan</a>
 	<div style="margin-left: 1020px;" class="collapse navbar-collapse" id="navbarSupportedContent">
 	    <ul class="navbar-nav mr-auto">
-	      <li><img width="40" src="../../assets/img/karyawan/"  class="pull-right img-thumbnail"></li>
+	      <li><img width="40" src="<?= base_url(); ?>assets/img/karyawan/<?= $show->gbr; ?>"  class="pull-right img-thumbnail"></li>
 	      <li class="nav-item dropdown">
 	        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          Dalban
+	          <?= $show->nama; ?>
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	          <a class="dropdown-item" href="">Akun</a>
-	          <a class="dropdown-item" href="">Profile</a>
-	          <a class="dropdown-item" href="">Logout</a>
+	          <a class="dropdown-item" href="?kontent=akun&id=<?= $show->id_user; ?>">Akun</a>
+	          <a class="dropdown-item" href="?kontent=profile">Profile</a>
+	          <a class="dropdown-item" href="<?= base_url(); ?>core/Route.php?route=logout">Logout</a>
 	        </div>
 	      </li>
 	    </ul>

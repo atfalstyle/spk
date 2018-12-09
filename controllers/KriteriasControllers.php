@@ -6,9 +6,9 @@ class KriteriasControllers
   {
     $this->model = $Model_all;
     $this->table_c1 = "c_pencapaian";
-    $this->table_c2 = "c_pencapaian";
-    $this->table_c3 = "c_pencapaian";
-    $this->table_c4 = "c_pencapaian";
+    $this->table_c2 = "c_disiplin";
+    $this->table_c3 = "c_attitude";
+    $this->table_c4 = "c_kompetensi";
   }
 
   // Criteria 1
@@ -49,7 +49,7 @@ class KriteriasControllers
       "nama_c2"   => $_POST['nm'],
       "bobot_c2"  => $_POST['bbt']
     );
-    $this->model->insert('c_pencapaian', $data);
+    $this->model->insert($this->table_c2, $data);
     return redirect(base_url().'/views/admin/beranda.php?kontent=kriteria');
   }
 
@@ -60,14 +60,14 @@ class KriteriasControllers
       "nama_c2"   => $_POST['nm'],
       "bobot_c2"  => $_POST['bbt']
     );
-    $this->model->update('c_pencapaian', $data, $where);
+    $this->model->update($this->table_c2, $data, $where);
     return redirect(base_url().'/views/admin/beranda.php?kontent=kriteria');
   }
 
   public function delete_adm_c2()
   {
     $id = $_GET['id'];
-    $this->model->delete('c_pencapaian', 'id_c2', $id);
+    $this->model->delete($this->table_c2, 'id_c2', $id);
     return redirect(base_url().'/views/admin/beranda.php?kontent=kriteria');
   }
 
@@ -79,7 +79,7 @@ class KriteriasControllers
       "nama_c3"   => $_POST['nm'],
       "bobot_c3"  => $_POST['bbt']
     );
-    $this->model->insert('c_pencapaian', $data);
+    $this->model->insert($this->table_c3, $data);
     return redirect(base_url().'/views/admin/beranda.php?kontent=kriteria');
   }
 
@@ -90,14 +90,14 @@ class KriteriasControllers
       "nama_c3"   => $_POST['nm'],
       "bobot_c3"  => $_POST['bbt']
     );
-    $this->model->update('c_pencapaian', $data, $where);
+    $this->model->update($this->table_c3, $data, $where);
     return redirect(base_url().'/views/admin/beranda.php?kontent=kriteria');
   }
 
   public function delete_adm_c3()
   {
     $id = $_GET['id'];
-    $this->model->delete('c_pencapaian', 'id_c3', $id);
+    $this->model->delete($this->table_c3, 'id_c3', $id);
     return redirect(base_url().'/views/admin/beranda.php?kontent=kriteria');
   }
 
@@ -109,7 +109,7 @@ class KriteriasControllers
       "nama_c4"   => $_POST['nm'],
       "bobot_c4"  => $_POST['bbt']
     );
-    $this->model->insert('c_kompetensi', $data);
+    $this->model->insert($this->table_c4, $data);
     return redirect(base_url().'/views/admin/beranda.php?kontent=kriteria');
   }
 
@@ -120,14 +120,14 @@ class KriteriasControllers
       "nama_c4"   => $_POST['nm'],
       "bobot_c4"  => $_POST['bbt']
     );
-    $this->model->update('c_pencapaian', $data, $where);
+    $this->model->update($this->table_c4, $data, $where);
     return redirect(base_url().'/views/admin/beranda.php?kontent=kriteria');
   }
 
   public function delete_adm_c4()
   {
     $id = $_GET['id'];
-    $this->model->delete('c_pencapaian', 'id_c4', $id);
+    $this->model->delete($this->table_c4, 'id_c4', $id);
     return redirect(base_url().'/views/admin/beranda.php?kontent=kriteria');
   }
 }

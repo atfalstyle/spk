@@ -8,10 +8,34 @@ class Model_all
     $this->db = $dbs;
   }
 
+  public function query($query)
+  {
+    try {
+      $stmt = $this->db->prepare($query);
+      $stmt->execute();
+      return $stmt;
+    } catch (PDOException $e) {
+      echo $e->getMessage();
+    }
+
+  }
+
   public function get($table)
   {
     try {
       $stmt = $this->db->prepare("SELECT * FROM $table");
+      $stmt->execute();
+      return $stmt;
+    } catch (PDOException $e) {
+      echo $e->getMessage();
+    }
+
+  }
+
+  public function get_order_asc($table, $order)
+  {
+    try {
+      $stmt = $this->db->prepare("SELECT * FROM $table ORDER BY $order ASC");
       $stmt->execute();
       return $stmt;
     } catch (PDOException $e) {

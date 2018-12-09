@@ -8,13 +8,13 @@
 	<div class="card-body">
 		<center>
 			<p><b>Foto Profile</b></p>
-			<img src="../../assets/img/karyawan/" width="142">
+			<img src="<?= base_url(); ?>assets/img/karyawan/<?= $show->gbr; ?>" width="142">
 		</center>
-		<p>NIK : <b></b></p>
-		<p>Nama : <b></b></p>
-		<p>Email : <b></b></p>
+		<p>NIK : <b><?= $show->nik; ?></b></p>
+		<p>Nama : <b><?= $show->nama; ?></b></p>
+		<p>Email : <b><?= $show->email; ?></b></p>
 		<p>Jabatan : <b>Admin</b></p>
-		<p>Tempat Lahir : <b></b></p>
+		<p>Tempat Lahir : <b><?= $show->tempat_lahir; ?></b></p>
 
 		<a href="?kontent=profile&aksi=edit&id=<?= $_SESSION["admin"] ?>" class="btn btn-sm btn-outline-success"><i class="fa fa-edit"></i> Edit Data</a>
 	</div>

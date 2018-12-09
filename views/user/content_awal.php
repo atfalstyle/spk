@@ -3,4 +3,4 @@
 	<li class="breadcrumb-item active">Beranda</li>
 </ol>
 
-<div class="alert alert-primary">Hai Dalban Kamu Login Sebagai User , Semoga Harimu Menyenangkan</div>
+<div class="alert alert-primary">Hai <?= $show->nama; ?> Kamu Login Sebagai User , Semoga Harimu Menyenangkan</div>

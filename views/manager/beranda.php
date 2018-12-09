@@ -1,5 +1,12 @@
 <?php
 session_start();
+require_once('../../core/Helper.php');
+require_once('../../core/Database.php');
+require_once('../../models/Model_all.php');
+
+$Model_all = new Model_all($dbs);
+$d = $Model_all->show('dt_karyawan', 'id_user', $_SESSION['manager']);
+$show = $d->fetch(PDO::FETCH_LAZY);
 if(@$_SESSION['manager']):
 
 ob_start();
@@ -17,10 +24,10 @@ ob_start();
   <title>SPK Penaikan Karyawan</title>
 
   <!-- Link CSS -->
-  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../../assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="../../assets/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
-  <link href="../../assets/css/sb-admin.css" rel="stylesheet">
+  <link href="<?= base_url(); ?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?= base_url(); ?>assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="<?= base_url(); ?>assets/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="<?= base_url(); ?>assets/css/sb-admin.css" rel="stylesheet">
   <!-- Akhir Link CSS -->
 
 </head>

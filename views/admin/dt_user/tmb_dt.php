@@ -6,7 +6,7 @@
 <div class="card mb-3">
 	<div class="card-header"><i class="fa fa-user"></i> Tambah Data User</div>
 	<div class="card-body">
-		<form action="../../controller/c_user.php?page=user_tmb" method="POST" enctype="multipart/form-data">
+		<form action="<?= base_url(); ?>core/Route.php?route=adm_insert_user" method="POST" enctype="multipart/form-data">
 			<div class="row">
 				<div class="col-md-6">
 		          <div class="form-group">

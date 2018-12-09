@@ -29,8 +29,8 @@
 				      <tbody>
 				      	<?php
 				      		$no = 1;
-				      		$lihat = $Model_all->get('c_pencapaian');
-				      		while ($data = $lihat->fetch(PDO::FETCH_LAZY)) {
+				      		$views = $Model_all->get('c_pencapaian');
+				      		while ($data = $views->fetch(PDO::FETCH_LAZY)) {
 				      	?>
 				        <tr>
 				          <td><?= $no++; ?></td>
@@ -65,8 +65,8 @@
 				      <tbody>
 				      	<?php
 				      		$no = 1;
-				      		$lihat = $Model_all->get('c_disiplin');
-				      		while ($data = $lihat->fetch(PDO::FETCH_LAZY)) {
+				      		$views = $Model_all->get('c_disiplin');
+				      		while ($data = $views->fetch(PDO::FETCH_LAZY)) {
 				      	?>
 				        <tr>
 				          <td><?= $no++; ?></td>
@@ -101,15 +101,15 @@
 				      <tbody>
 				      	<?php
 				      		$no = 1;
-				      		$lihat = $Model_all->get('c_attitude');
-				      		while ($data = $lihat->fetch(PDO::FETCH_LAZY)) {
+				      		$views = $Model_all->get('c_attitude');
+				      		while ($data = $views->fetch(PDO::FETCH_LAZY)) {
 				      	?>
 				        <tr>
 				          <td><?= $no++; ?></td>
 				          <td><?= $data->nama_c3; ?></td>
 				          <td><?= $data->bobot_c3; ?></td>
 				          <td>
-				          	<a href="?kontent=kriteria&aksi=edit_c2&id=<?= $data->id_c3; ?>" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="Edit Data"><i class="fa fa-edit"></i></a>
+				          	<a href="?kontent=kriteria&aksi=edit_c3&id=<?= $data->id_c3; ?>" class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="top" title="Edit Data"><i class="fa fa-edit"></i></a>
 				          	<a onclick="return confirm('Yakin Ingin Hapus Data..??')" href="<?= base_url(); ?>core/Route.php?route=delete_adm_crit_3&id=<?= $data->id_c3; ?>" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="right" title="Hapus Data"><i class="fa fa-trash-o"></i></a>
 				          </td>
 				        </tr>
@@ -137,8 +137,8 @@
 				      <tbody>
 				      	<?php
 				      		$no = 1;
-				      		$lihat = $Model_all->get('c_kompetensi');
-				      		while ($data = $lihat->fetch(PDO::FETCH_LAZY)) {
+				      		$views = $Model_all->get('c_kompetensi');
+				      		while ($data = $views->fetch(PDO::FETCH_LAZY)) {
 				      	?>
 				        <tr>
 				          <td><?= $no++; ?></td>
