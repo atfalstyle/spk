@@ -1,19 +1,27 @@
-
-
 {
     "name": "spk/spk",
+    "description": "This Example For Project SPK",
+    "versions": "1.0",
     "type": "library",
-    "description": "Your package description goes here",
-    "keywords": ["relevant","tags","go","here"],
-    "homepage": "https://yourcompany.com",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Jordi Boggiano",
-            "email": "j.boggiano@seld.be",
-            "homepage": "http://seld.be",
-            "role": "Developer"
-        }
-    ]
+    "minimum-stability": "dev",
+	"require": {
+		"php": ">=5.6",
+		"spk/spk":"dev-master@dev"
+	},
+	"repositories": [
+	  {
+	     "type": "vcs",
+	     "url": "https://github.com/atfalstyle/spk" 
+	  }
+	],
+	"require-dev": {},
+	"autoload": {},
+	"authors": [
+		{
+			"name": "Muchammad Athfal",
+			"email": "atfalstyle@gmail.com"
+		}
+	]
 }
 
